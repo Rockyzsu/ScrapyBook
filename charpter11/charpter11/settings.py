@@ -14,7 +14,7 @@ BOT_NAME = 'charpter11'
 SPIDER_MODULES = ['charpter11.spiders']
 NEWSPIDER_MODULE = 'charpter11.spiders'
 
-SPLASH_URL = 'http://localhost:8050'
+SPLASH_URL = 'http://10.18.6.102:8050'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0'
@@ -28,7 +28,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -72,9 +72,9 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'charpter11.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'charpter11.pipelines.Charpter11Pipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
